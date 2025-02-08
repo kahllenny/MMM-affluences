@@ -1,7 +1,7 @@
 {
-  "name": "mmm-template",
+  "name": "mmm-affluences",
   "version": "1.0.0",
-  "description": "[Module description]",
+  "description": "MagicMirror module to display the affluences of a place",
   "main": "MMM-Template.js",
   "scripts": {
     "lint": "eslint .",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+[GitHub url].git"
+    "url": "git+https://github.com/kahllenny/MMM-affluences.git"
   },
   "keywords": [
     "template"
   ],
-  "author": "[Author]",
+  "author": "Lenny Kahl",
   "license": "MIT",
   "bugs": {
-    "url": "[GitHub url]/issues"
+    "url": "https://github.com/kahllenny/MMM-affluences/issues"
   },
-  "homepage": "[GitHub url]#readme",
+  "homepage": "https://github.com/kahllenny/MMM-affluences#readme",
   "devDependencies": {
-    "@eslint/js": "^9.10.0",
+    "@eslint/js": "^9.20.0",
     "@stylistic/eslint-plugin": "^2.7.2",
     "eslint": "^9.10.0",
     "globals": "^15.9.0"
