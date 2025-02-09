@@ -28,13 +28,13 @@ git pull
 To use this module, add it to the modules array in the `config/config.js` file:
 
 ```js
-        {
-            module: "MMM-affluences",
-            position: "top_left",
-            config: {
-                token: "" //insert your token here
-            }
-        },
+		{
+			module: "MMM-affluences",
+			position: "top_left", 
+			config: {
+				token: "" //insert your token here
+			}
+		},
 ```
 
 To find your token, inspect the webpage where an Affluences integration is hosted and look for the ``data-token`` attribute
@@ -48,10 +48,10 @@ A full config looks like this
 			config: {
 				token: "ipPTbBm3K8JGTx",
 				forecastCount: 3,
-                grayscale: false,
-                lang: "de",
-                dataTitleOverride: true,
-                dataTitleOverrideString: "SLUB"
+				grayscale: false,
+				lang: "de",
+				dataTitleOverride: true,
+				dataTitleOverrideString: "SLUB"
 			}
 		},
 ```
