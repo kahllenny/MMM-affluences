@@ -1,13 +1,9 @@
-# MMM-Template
-Use this template for creating new MagicMirror² modules.
+# MMM-affluences
 
-See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for an in depth overview of how to get started.
-
-# MMM-Template
+Uses the [affluences API](https://support.affluences.com/portal/en/kb/articles/api-web-integration-and-customisation) to show the Occupancy rate of a place
 
 ![Example of MMM-Template](./example_1.png)
 
-[Module description]
 
 ## Installation
 
@@ -17,13 +13,13 @@ In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-Tem
 
 ```bash
 cd ~/MagicMirror/modules
-git clone [GitHub url]
+git clone https://github.com/kahllenny/MMM-affluences
 ```
 
 ### Update
 
 ```bash
-cd ~/MagicMirror/modules/MMM-Template
+cd ~/MagicMirror/modules/MMM-affluences
 git pull
 ```
 
@@ -32,40 +28,43 @@ git pull
 To use this module, add it to the modules array in the `config/config.js` file:
 
 ```js
-    {
-        module: 'MMM-Template',
-        position: 'lower_third'
-    },
+        {
+            module: "MMM-affluences",
+            position: "top_left",
+            config: {
+                token: "" //insert your token here
+            }
+        },
 ```
 
-Or you could use all the options:
+To find your token, inspect the webpage where an Affluences integration is hosted and look for the ``data-token`` attribute
+
+A full config looks like this
 
 ```js
-    {
-        module: 'MMM-Template',
-        position: 'lower_third',
-        config: {
-            exampleContent: 'Welcome world'
-        }
-    },
+		{
+			module: "MMM-affluences",
+			position: "top_left", 
+			config: {
+				token: "ipPTbBm3K8JGTx",
+				forecastCount: 3,
+                grayscale: false,
+                lang: "de",
+                dataTitleOverride: true,
+                dataTitleOverrideString: "SLUB"
+			}
+		},
 ```
 
 ## Configuration options
 
 Option|Possible values|Default|Description
 ------|------|------|-----------
-`exampleContent`|`string`|not available|The content to show on the page
-
-## Sending notifications to the module
-
-Notification|Description
-------|-----------
-`TEMPLATE_RANDOM_TEXT`|Payload must contain the text that needs to be shown on this module
-
-## Developer commands
-
-- `npm install` - Install devDependencies like ESLint.
-- `npm run lint` - Run linting and formatter checks.
-- `npm run lint:fix` - Fix linting and formatter issues.
+`token`|`string`|| Identifier of the affluences location
+`forecastCount`|`number`|0| Shows the forecasts of the next time slots (only up to 5 possible)
+`grayscale`|`boolean`|false| Enables grayscale
+`lang`|`string`|en| Changes the language to de, en, es, fr, it
+`dataTitleOverride`|`boolean`|false| Enables title override
+`dataTitleOverrideString`|`string`|| Changes the title
 
 [mm]: https://github.com/MagicMirrorOrg/MagicMirror
