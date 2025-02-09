@@ -1,3 +1,6 @@
-#affluences-wrapper {
-    width: 25%; /* Make it take up 1/4 of the screen */
+/* No clue what I am doing here so this is written by chatgpt */
+.module.MMM-affluences {
+    width: 25% !important; /* Limit width to 1/4 of the screen */
+    max-width: 300px !important; /* Prevent it from getting too big */
+    min-width: 200px; /* Prevent it from being too small */
 }
