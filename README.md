@@ -1,6 +1,6 @@
 # MMM-affluences
 
-Uses the [affluences API](https://support.affluences.com/portal/en/kb/articles/api-web-integration-and-customisation) to show the Occupancy rate of a place
+Uses the [affluences API](https://support.affluences.com/portal/en/kb/articles/api-web-integration-and-customisation) to show the occupancy rate of a place
 
 ![Example of MMM-Template](./example_1.png)
 
@@ -9,7 +9,7 @@ Uses the [affluences API](https://support.affluences.com/portal/en/kb/articles/a
 
 ### Install
 
-In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-Template:
+In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-affluences:
 
 ```bash
 cd ~/MagicMirror/modules
