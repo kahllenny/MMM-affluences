@@ -30,14 +30,16 @@ Module.register("MMM-affluences", {
     Log.info("Loading Affluences API script...");
     let script = document.createElement("script");
     script.src = "https://webapi.affluences.com/js/webapi_latest.min.js";
-    script.charset = "UTF-8";
     script.onload = () => {
         Log.info("Affluences API script loaded successfully.");
         this.updateDom();
     };
     document.body.appendChild(script);
   },
-    
+  
+  /**
+   * Render the page we're on.
+   */
   getDom() {
     const wrapper = document.createElement("div");
 
